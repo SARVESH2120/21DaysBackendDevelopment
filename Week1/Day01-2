@@ -1,0 +1,178 @@
+                                          OOPS(Object Oriented Programming System)
+
+
+       //Procedural programming
+        //Functional Programming
+        //what is oops(it is a concept)(use of class and object in programming are called oop)(it is a paradigm)
+
+        // what is class and object 
+        //class is a logical entity, it is a blueprint of an object, it has behaviour(Data) and properties(Methods)
+        //object is an real entity
+        
+        //now creating object
+        // new keyword is used to alocate a dynamic memory in java program 
+
+
+
+    class Student{
+        //DATA:data members: INSTANCE VARIABLE
+        int studentId;
+        String studentName;
+        String studentCity;
+
+        //BEHAVIOUR: member methods:mthods: (functions)
+        public void study(){
+            System.out.println(studentName + " is study");
+        }
+        public void showFullDetails(){
+            System.out.println("My name is " + studentName);
+            System.out.println("My id is " + studentId);
+            System.out.println("My city is " + studentCity);
+        }
+    }
+
+class Hello{
+    public static void main(String[] args) {
+        Student st1,st2;
+        st1 = new Student();
+        st2 = new Student();
+
+        st1.studentName = "Sarvesh ";
+        st1.studentId=1931002;
+        st1.studentCity = "Gorakhpur";
+
+        st2.studentName = "Amit";
+        st2.studentId = 1931001;
+        st1.studentCity = "Delhi";
+
+        st1.study();
+        st1.showFullDetails();
+
+        st2.study();
+        st2.showFullDetails();
+    }
+}
+
+
+
+                                        CONSTRUCTOR
+//Constructor is used to initialize the data of the object
+      //automatically call when we create constructor
+      //constructor name is similar to the class name (Constructor Name == Class Name)
+      //Constructor doesn't return any value.Not even void
+      //public Student() //Non parameterized con's
+      //public Student(int a , int b, String str) //Parameterized con's
+      //when java create automatically - default constructor??
+      //-if class doen't have any constructor then java creates one default constructor
+
+
+
+
+    class Student{
+
+        int studentId;
+        String studentName;
+        String studentCity;
+
+        public Student(){
+            System.out.println("Creating Constructor n-p");
+        }
+        //Defining multiple constructor in same class is known as con's overloading
+        /*
+         * Number of args different
+         * Type of args different
+         * Order of args may diferent
+         * At least one must be there for con's overlloading
+         */
+        public Student(int st){
+            System.out.println("Parameterized cons");
+        }
+        public Student (int i, String n, String c){
+            studentId = i ; 
+            studentName = n;
+            studentCity = c;
+        }
+
+
+        public void study(){
+            System.out.println(this.studentName + " is study");
+        }
+        //METHOD OVERLOADING
+        public void study(int i){
+            System.out.println(studentId + "this is student id");
+        }
+        public void showFullDetails(){
+            System.out.println("My name is " + studentName);
+            System.out.println("My id is " + studentId);
+            System.out.println("My city is " + studentCity);
+        }
+
+    }
+
+class Hello{
+
+    public static void main(String[] args) {
+        Student st1,st2, st3;
+        st1 = new Student();
+        st2 = new Student(12);
+        st3= new Student(12,"immo","haryana");
+
+        st1.studentName = "Sarvesh ";
+        st1.studentId=1931002;
+        st1.studentCity = "Gorakhpur";
+
+        st2.studentName = "Amit";
+        st2.studentId = 1931001;
+        st1.studentCity = "Delhi";
+
+        st1.study();
+        
+        st1.showFullDetails();
+
+        st2.study();
+        st2.showFullDetails();
+
+        st3.study();
+        st3.showFullDetails();
+    }
+}
+
+
+//this keyword refers to current invoking object
+// this() -> for calling current class constructor from inside different con's pf same class.
+
+
+
+
+
+
+
+
+                                          INHERITANCE
+
+class Animal{
+    String color = "BLue";
+
+    public void eating(String st){
+        System.out.println(st + "Animal is eating");
+    }
+}
+
+class Dog extends Animal{
+    //this ,super
+}
+
+public class Inheri {
+    public static void main(String[] args) {
+        Dog an;
+        an = new Dog();
+        an.eating("chotu");
+    }
+    
+}
+super keyword refer to immediate parent
+super() user to call parent class constructor from inside child class constructor
+
+
+
+
