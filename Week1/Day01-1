@@ -1,0 +1,91 @@
+                                                                          Core Java
+class Hello{
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+
+        // data_types variable_name;  (declaration)
+        //variable_name = value ; (initilization)
+
+        //data_types variable_name = value (declaration and initialization)
+        // int a  =89;
+
+        //Java is statically typed programming language
+        // double x = 89.90;
+
+        //Primitive Data Types{byte,short,int,long,float,double,char,boolean}
+        //Non Primitive Data Type(Refrence Data Type or User defined DataTyped){String,Array,List,ArrayList etc}
+
+        //TypeCasting: 
+        // int i=90;
+        // double d = i; //implicit type casting
+
+
+        // double myval = 89.23;
+        // int myvalInt = (int)myval;    //explicit type conversion
+
+
+
+        //Java Operator's
+        //if() else{}
+
+/* 
+        int marks = 88;
+        if(marks > 90){
+            System.out.println("Grade A");
+        }else if(marks > 80 && marks <=90 ){
+            System.out.println("Grade B");
+        }else {
+            System.out.println("Fail");
+        }
+
+*/
+
+        // switch statement 
+        
+        /* 
+        String  st= "Sarvesh";
+        switch (st) {
+            case "Amit":
+                System.out.println("1");
+                break;
+             case "Immortal":
+                System.out.println("1");
+                break;
+             case "Sarvesh":
+                System.out.println("Sarvesh");
+                break;
+             case "google":
+                System.out.println("1");
+                break;
+             case "ahuman":
+                System.out.println("1");
+                break;
+        
+            default:
+                System.out.println("none");
+                break;
+        }
+        */
+
+        //LOOP
+
+        // String str = "Sarvesh";
+        // for(int i= 0 ; i<str.length(); i++){
+        //     System.out.println(str.charAt(i));
+        // }
+       
+        //while
+        //do while
+        //for each -- array traverse
+
+
+        // int nums[] = {12,13,14,15};
+        // int s = 0;
+        // for (int i : nums) {
+        //    s+=i;
+        // }
+        // System.out.println(s);
+
+    }
+
+}
