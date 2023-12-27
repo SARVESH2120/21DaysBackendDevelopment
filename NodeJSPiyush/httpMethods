@@ -1,0 +1,48 @@
+HTTP GET - When we want to get data from from server
+HTTP POST - When we want to send and mutate some data from from server
+HTTP PUT - upload a image
+HTTP PATCH - change a name
+HTTP DELETE - DELETE THE ACCOUNT
+
+  const http = require("http");
+const fs = require("fs");
+const url = require("url");
+
+const myServer = http.createServer((req, res)=>{
+    const log = `${Date.now()} :${req.method}  ${req.url } New Req Received\n`;
+    const myUrl = url.parse(req.url , true);
+    fs.appendFile("log.text",log,(err,data)=>{
+        switch(myUrl.pathname){
+            case "/" :
+                if(req.method === "GET") res.end("Homepage")
+                break;
+            case "/about":
+                const userName = myUrl.query.myname;
+                res.end(`Hi, ${userName}`)
+                break;
+
+            case "/signup":
+                if(req.method === "GET") res.end("This is a sign up page")
+                else if(req.method === "POST"){
+                    res.end("Success")
+                }
+            
+            case "/search" :
+                //http://localhost:8000/search?search_query=js+human+animal+no+difference
+                const search = myUrl.query.search_query;
+                res.end(`here are you result for + ${search}`)
+                break;
+
+             case "/bio":
+                res.end("I am bio")
+                break;
+            default :
+                res.end("404 Not Found")
+        }
+        
+    })
+    
+   
+});
+
+myServer.listen(8000,()=> console.log("Serverstarted"))
