@@ -1,7 +1,7 @@
-// https : hypertext transfer protocol(set of rule) secure  (ssl certificate use)
-//http
-//ws web socket
-//url basics -- protocol + domain + path +(after  ? )query parameters
+https : hypertext transfer protocol(set of rule) secure  (ssl certificate use)
+http
+ws web socket
+url basics -- protocol + domain + path +(after  ? )query parameters
 
 
 
