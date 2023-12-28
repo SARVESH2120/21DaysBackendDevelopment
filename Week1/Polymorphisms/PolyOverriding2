@@ -1,0 +1,9 @@
+public class Poly {
+    public static void main(String[] args) {
+        Overriding ov = new Employee();
+        ov.showDetails();
+        // ov.read("Harry Potter");
+    }
+    
+}
+
